@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IPv4 - Herramienta ASIR</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <main class="contenedor-principal">
+        <header class="cabecera">
+            <h1>Calculadora de Subredes IPv4</h1>
+            <p>Herramienta de cálculo rápido de red, broadcast y hosts disponibles</p>
+        </header>
+
+        <section class="tarjeta-calculadora">
+            <form class="formulario-red">
+                <div class="grupo-input">
+                    <label for="direccion-ip">Dirección IP (IPv4):</label>
+                    <input type="text" id="direccion-ip" name="ip" placeholder="Ej: 192.168.1.10" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="mascara-cidr">Máscara de Red (CIDR):</label>
+                    <input type="number" id="mascara-cidr" name="cidr" min="1" max="32" placeholder="Ej: 24" required>
+                </div>
+
+                <div class="grupo-botones">
+                    <input type="submit" value="Calcular Subred" class="btn-calcular">
+                    <input type="reset" value="Limpiar" class="btn-limpiar">
+                </div>
+            </form>
+
+            <!-- Bloque de resultados simulados para la interfaz -->
+            <div class="panel-resultados">
+                <h2>Resultados de la Red</h2>
+                <div class="fila-resultado">
+                    <span>Dirección de Red:</span>
+                    <strong>192.168.1.0</strong>
+                </div>
+                <div class="fila-resultado">
+                    <span>Máscara Decimal:</span>
+                    <strong>255.255.255.0</strong>
+                </div>
+                <div class="fila-resultado">
+                    <span>Dirección de Broadcast:</span>
+                    <strong>192.168.1.255</strong>
+                </div>
+                <div class="fila-resultado">
+                    <span>Hosts Útiles:</span>
+                    <strong>254</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
