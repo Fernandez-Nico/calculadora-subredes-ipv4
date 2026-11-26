@@ -1,0 +1,158 @@
+/* Reset y Modelo de Cajas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 550px;
+}
+
+.cabecera {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cabecera h1 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.cabecera p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Tarjeta principal */
+.tarjeta-calculadora {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario e Inputs */
+.formulario-red {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-input label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #cbd5e1;
+}
+
+.grupo-input input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background-color: #0f172a;
+    color: white;
+    font-size: 1rem;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+/* Botones con Flexbox */
+.grupo-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.grupo-botones input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-calcular {
+    background-color: #0284c7;
+    color: white;
+}
+
+.btn-calcular:hover {
+    background-color: #0369a1;
+}
+
+.btn-limpiar {
+    background-color: #334155;
+    color: #e2e8f0;
+}
+
+.btn-limpiar:hover {
+    background-color: #475569;
+}
+
+/* Panel de resultados */
+.panel-resultados {
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #38bdf8;
+}
+
+.panel-resultados h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.fila-resultado {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #1e293b;
+    font-size: 0.95rem;
+}
+
+.fila-resultado:last-child {
+    border-bottom: none;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .tarjeta-calculadora {
+        padding: 20px;
+    }
+
+    .grupo-botones {
+        flex-direction: column;
+    }
+
+    .fila-resultado {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
